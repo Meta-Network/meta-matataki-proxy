@@ -1,0 +1,17 @@
+{
+  "name": "meta-matataki-query",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vercel/node": "^1.12.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "mysql2": "^2.3.2"
+  }
+}
