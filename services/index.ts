@@ -21,6 +21,10 @@ export async function queryUsers(type: string, operator: string, amount: number)
   let query: string;
 
   switch (type) {
+    case "fanticket":
+      query = `SELECT uid FROM minetokens;`;
+      break;
+
     case "post":
       query = `SELECT uid FROM posts WHERE status = 0 GROUP BY uid HAVING count(uid) ${Operators[operator]} ?;`;
       break;
