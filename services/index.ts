@@ -40,7 +40,7 @@ export async function queryUsers(type: string, operator: string, amount: number)
       break;
 
     case "DEVELOPER":
-      query = `SELECT ${process.env.DEVELOPER_USER_ID} AS uid;`
+      query = `SELECT ${amount} AS uid;`
       break;
 
     default:
