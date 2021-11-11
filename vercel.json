@@ -5,6 +5,10 @@
     {
       "source": "/api/users",
       "destination": "/api/users"
+    },
+    {
+      "source": "/api/notification",
+      "destination": "/api/notification"
     }
   ],
   "headers": [
@@ -37,12 +41,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "ACCESS_TOKEN": "@access-token",
-    "DB_HOST": "kyubeydb.mysql.database.azure.com",
-    "DB_USER": "ssp@kyubeydb",
-    "DB_PASSWORD": "@matataki-db-password",
-    "DB_DATABASE": "ssp_prod"
-  }
+  ]
 }

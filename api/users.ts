@@ -3,6 +3,11 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 import { queryUsers } from "../services";
 
 export default async function (req: VercelRequest, res: VercelResponse) {
+  if (req.method !== 'GET') {
+    res.status(404).json({ message: 'NOT_FOUND' });
+    return;
+  }
+
   if (req.headers.authorization !== `Bearer ${process.env.ACCESS_TOKEN}`) {
     res.status(403).json({ message: "FORBIDDEN" });
     return;
