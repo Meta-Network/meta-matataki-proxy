@@ -61,7 +61,6 @@ export async function addNotification(data: Array<NotificationDto>) {
 
     for (const { userId, invitations } of data) {
       const [announcement] = await connection.execute<OkPacket>("INSERT INTO announcement(sender, title, content) VALUES('admin', ?, ?);", [
-        "admin", 
         "你得到了 Meta Network 空投邀请码",
         `你好，创作者，感谢你曾经对 Matataki 的支持！<br>` +
         `我们的新产品 Meta Network 已经上线，特此对老用户空投邀请码，欢迎加入！你的邀请码为：<br>` +
