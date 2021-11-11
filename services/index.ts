@@ -73,6 +73,8 @@ export async function addNotification(data: Array<NotificationDto>) {
         userId, announcement.insertId,
       ]);
       await connection.execute("INSERT INTO notify_event_recipients(event_id, user_id) VALUES (?, ?);", [event.insertId, userId])
+
+      console.log("Notification added:", userId, invitations);
     }
 
     await connection.commit();
