@@ -65,7 +65,7 @@ export async function addNotification(data: Array<NotificationDto>) {
         "Hi，Matataki 的老朋友！<br>还记得那句我们的 Slogan 吗？<br><strong>“发布瞬间，灵感永存!”</strong><br><br>" +
         "——在实现了去中心化存储、完成了社交代币初体验之后，<br>我们决定用一个新的产品，来帮助热情的创造者开启 Web3.0 独立站点！<br><br>" +
         "无需中心平台、可以用 Meta 域名直接访问的 Meta Space，<br>将以社交代币彼此联结，产生价值，组成 Meta Network！<br><br>" +
-        '<strong>现在，我们就邀请您前往 <a href="https://home.metanetwork.online/">Meta Network</a>，通过您的邀请码来注册账户：</strong><br>' +
+        '<strong>现在，我们就邀请您前往 <a href="https://metanetwork.online/">Meta Network</a>，通过您的邀请码来注册账户：</strong><br>' +
         invitations.join("<br>") + "<br><br>" +
         "您可以在一个真正意义上自己的站点上，<br>来体验到以往必须通过 Matataki 这样的平台来实现的功能。<br>和老朋友们一起探索下一代的社交网络——一个个信息星球组成的数字星系，Meta Network！<br><br>" +
         '<a href="https://home.metanetwork.online/">https://home.metanetwork.online/</a><br>',
