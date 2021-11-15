@@ -70,7 +70,7 @@ export async function addNotification(data: Array<NotificationDto>) {
         "您可以在一个真正意义上自己的站点上，<br>来体验到以往必须通过 Matataki 这样的平台来实现的功能。<br>和老朋友们一起探索下一代的社交网络——一个个信息星球组成的数字星系，Meta Network！<br><br>" +
         '<a href="https://home.metanetwork.online/">https://home.metanetwork.online/</a><br>',
       ]);
-      const [event] = await connection.execute<OkPacket>("INSERT INTO notify_event(user_id, action, object_id, object_type, create_time) VALUES(?, 'annouce', ?, 'announcement', NOW());", [
+      const [event] = await connection.execute<OkPacket>("INSERT INTO notify_event(user_id, action, object_id, object_type, create_time) VALUES(?, 'annouce', ?, 'announcement', DATE_ADD(NOW(), INTERVAL 8 HOUR));", [
         userId, announcement.insertId,
       ]);
       await connection.execute("INSERT INTO notify_event_recipients(event_id, user_id) VALUES (?, ?);", [event.insertId, userId])
